@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abid Al Mahdi | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 10%;
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+        }
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        header p {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+        header img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .content h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .content ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        #contact {
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+            padding: 50px 20px;
+            text-align: center;
+        }
+        #contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #contact input, #contact textarea {
+            width: 80%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        #contact button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #0072ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #contact button:hover {
+            background-color: #00c6ff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Abid Al Mahdi</h1>
+        <p>Full-Stack Developer & Digital Creator</p>
+    </div>
+    <img src="man.webp.png" alt="Abid Al Mahdi">
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="content">
+        <p>I am a passionate full-stack developer and digital creator. I specialize in creating dynamic web applications and have a strong interest in nature, technology, and gaming. I love exploring new technologies and continuously improving my skills.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="content">
+        <h3>Project 1: Advanced Library Management System</h3>
+        <ul>
+            <li>Developed a fully functional library management system using HTML, CSS, JavaScript, and Python.</li>
+            <li>Integrated GSAP and Three.js for smooth animations and 3D effects.</li>
+            <li>Implemented a real-time login and OTP-based sign-in system.</li>
+        </ul>
+
+        <h3>Project 2: 3D Gradient Login Page</h3>
+        <ul>
+            <li>Created a dynamic 3D login page with linear gradient backgrounds.</li>
+            <li>Used HTML, CSS, and JavaScript to develop the page with smooth scroll animations.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="content">
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python & Django</li>
+            <li>GSAP & Three.js</li>
+            <li>Responsive Web Design</li>
+            <li>Full-Stack Development</li>
+            <li>Video Editing & Content Creation</li>
+        </ul>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="content">
+        <h3>Freelance Full-Stack Developer</h3>
+        <ul>
+            <li>Developed and maintained multiple client websites with a focus on performance and user experience.</li>
+            <li>Worked on both front-end and back-end development, ensuring seamless integration of features.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="content">
+        <h3>High School student</h3>
+        <ul>
+            <li>Currently in 9th grade, focusing on science and technology.</li>
+            <li>Participated in various coding competitions and tech events.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/abidalmahdi149@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate the header elements
+    gsap.from("header div", {
+        duration: 1.5,
+        opacity: 0,
+        y: -50,
+        ease: "power3.out",
+        delay: 0.5
+    });
+
+    gsap.from("header img", {
+        duration: 1.5,
+        opacity: 0,
+        x: 50,
+        ease: "power3.out",
+        delay: 1
+    });
+
+    // Animate each section with staggered reveal
+    gsap.utils.toArray("section").forEach((section, i) => {
+        gsap.fromTo(section, {
+            opacity: 0,
+            y: 50
+        }, {
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none none",
+                once: true
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1.5,
+            ease: "power3.out",
+            delay: i * 0.3
+        });
+    });
+
+    // Animate elements inside the sections
+    gsap.utils.toArray(".content").forEach((content, i) => {
+        gsap.from(content.children, {
+            scrollTrigger: {
+                trigger: content,
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none none",
+                once: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.2,
+            delay: 0.3
+        });
+    });
+</script>
+
+</body>
+</html>
